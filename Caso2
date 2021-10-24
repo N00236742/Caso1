@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Pregunta2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ListaEnlazadaSimple les = new ListaEnlazadaSimple();
+            les.agregarNuevo(20);
+            les.agregarNuevo(2);
+            les.agregarNuevo(19);
+            les.agregarNuevo(1);
+
+            les.ImprimirValores();
+            Console.WriteLine("Nuevo Orden: \n");
+            les.ordenamientoAscendente();
+            les.ImprimirValores();
+            Console.ReadLine();
+        }
+    }
+}
