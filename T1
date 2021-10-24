@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Caso1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Nodo nodo1 = new Nodo();
+            Nodo nodo2 = new Nodo();
+            Nodo nodo3 = new Nodo();
+            Nodo nodo4 = new Nodo();
+            Nodo nodo5 = new Nodo();
+            nodo1.valor = "Marlene";
+            nodo1.siguiente = nodo2;
+            nodo2.valor = "Jadiel";
+            nodo2.siguiente = nodo3;
+            nodo3.valor = "Emerson";
+            nodo3.siguiente = nodo4;
+            nodo4.valor = "Linda";
+            nodo4.siguiente = nodo5;
+            nodo5.valor = "Percy";
+            nodo5.siguiente = null;
+            ListaEnlazadaSimple ListaEmpleados = new ListaEnlazadaSimple();
+            ListaEmpleados.cabeza = nodo1;
+            ListaEmpleados.RecorerrLista();
+            Console.WriteLine("Agregar nuevo empleado: ");
+            ListaEmpleados.AgregarAlFinal(Console.ReadLine());
+            ListaEmpleados.RecorerrLista();
+            Console.WriteLine("Agregar nuevo empleado: ");
+            ListaEmpleados.AgregarAlFinal(Console.ReadLine());
+            ListaEmpleados.RecorerrLista();
+            ListaEmpleados.EliminarInicio();
+            ListaEmpleados.RecorerrLista();
+            ListaEmpleados.EliminarInicio();
+            ListaEmpleados.RecorerrLista();
+            ListaEmpleados.EliminarFinal();
+            ListaEmpleados.RecorerrLista();
+            Console.Read();
+        }
+    }
+}
